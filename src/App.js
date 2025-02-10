@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css'; // Import CSS
 
-const API_URL = 'https://your-backend.azurewebsites.net/contacts'; // Update this for Azure backend
+const API_URL = 'betest-a4e0d0euefhegmbn.canadacentral-01.azurewebsites.net'; // Update this for Azure backend
 
 function App() {
     const [contacts, setContacts] = useState([]);

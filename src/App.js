@@ -2,7 +2,7 @@ import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import './App.css'; // Import CSS
 
-const API_URL = 'betest-a4e0d0euefhegmbn.canadacentral-01.azurewebsites.net'; // Update this for Azure backend
+const API_URL = 'https://betest-a4e0d0euefhegmbn.canadacentral-01.azurewebsites.net/contacts'; // Correct API URL
 
 function App() {
     const [contacts, setContacts] = useState([]);
@@ -20,6 +20,7 @@ function App() {
             setContacts(response.data);
         } catch (error) {
             console.error("Error fetching contacts:", error);
+            alert("Failed to fetch contacts. Please check your backend.");
         }
     };
 
@@ -33,6 +34,7 @@ function App() {
             setPhone('');
         } catch (error) {
             console.error("Error adding contact:", error);
+            alert("Failed to add contact. Please try again.");
         }
     };
 
@@ -43,6 +45,7 @@ function App() {
             fetchContacts();
         } catch (error) {
             console.error("Error deleting contact:", error);
+            alert("Failed to delete contact.");
         }
     };
 
